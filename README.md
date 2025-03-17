@@ -1,3 +1,5 @@
+# HaloUI
+
 ## How to use
 
 #### 1.导入库
@@ -8,7 +10,7 @@ go get "github.com/Aixve-c/HaloUI"
 
 #### 2.设置常规信息
 
-```cpp
+```go
 HaloUI.SetTitle("xx漏洞poc")                 //设置标题
 HaloUI.SetReadme("ip为目标，端口默认为80")      //设置说明文档
 ```
@@ -21,7 +23,7 @@ AddInput入参依次为
 - ui中显示的名字
 - 是否必填
 
-```cpp
+```go
 HaloUI.AddInput("url", "URL", true)            //必填的输入框
 HaloUI.AddInput("port", "端口", false)         //非必填的输入框
 ```
@@ -34,7 +36,7 @@ HaloUI.SetFunc(mypoc)
 
 #### 5.启动
 
-```scss
+```go
 HaloUI.Run()
 ```
 
@@ -50,10 +52,16 @@ HaloUI.Run()
 
 #### 追加一行输出
 
-1.1秒同步一次结果
+5秒同步一次结果
 
-```bash
+```go
 HaloUI.AddOutput("开搞")
+```
+
+如果希望运行完成一次性返回结果则使用如下代码
+
+```go
+HaloUI.SetSync()
 ```
 
 #### 完成
@@ -61,7 +69,7 @@ HaloUI.AddOutput("开搞")
 入参为弹窗提示词
 注意：在报错或者执行成功后都应该加上次此函数
 
-```bash
+```go
 HaloUI.Finsh("完成")
 ```
 
