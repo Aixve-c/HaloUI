@@ -118,8 +118,8 @@ func mypoc(HaloPars []string) {
 		time.Sleep(3 * time.Second)
 	}
 
-	HaloUI.Finsh("完成") //报错处理（Finsh和return必须加）
-	return             //报错处理（Finsh和return必须加）
+	HaloUI.Finsh("完成") //Finsh和return必须加
+	return             //Finsh和return必须加
 }
 
 ```
